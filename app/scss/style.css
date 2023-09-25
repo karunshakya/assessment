@@ -387,7 +387,7 @@ button, .button {
   .how-works__image {
     flex: 2;
     order: 1;
-    height: 41rem;
+    height: 20rem;
     background-image: none;
   }
 }
