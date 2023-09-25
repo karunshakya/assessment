@@ -371,7 +371,7 @@ button, .button {
 }
 .how-works__image {
   position: relative;
-  background-image: url("/images/plg-academy-bg.svg");
+  background-image: url("../../images/plg-academy-bg.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -396,7 +396,7 @@ button, .button {
     content: "";
     position: absolute;
     height: 100%;
-    background-image: url("/images/plg-academy-bg.svg");
+    background-image: url("../../images/plg-academy-bg.svg");
     background-repeat: no-repeat;
     background-position: center bottom;
     width: 100%;
@@ -409,7 +409,7 @@ button, .button {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("/images/ProductLed Method v4.png");
+  background-image: url("../../images/ProductLed Method v4.png");
   background-size: 93%;
   background-repeat: no-repeat;
   background-position: center bottom;
