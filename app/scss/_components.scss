@@ -47,4 +47,21 @@
             }
         }
     }
+
+    .slick-prev:before, .slick-next:before{
+        color:$hiveYellow;
+        font-size: 2.5rem;
+    }
+
+    .slick-next{
+        @include breakpoints-down(medium){
+            right: 1.25rem;
+        }
+    }
+
+    .slick-prev{
+        @include breakpoints-down(medium){
+            left: 0;
+        }
+    }
 }

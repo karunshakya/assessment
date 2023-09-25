@@ -208,7 +208,7 @@ button, .button {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 17.5rem;
+  min-height: 20.5rem;
 }
 @media (min-width: 40em) {
   .hero__image {
@@ -243,7 +243,7 @@ button, .button {
   width: 100%;
   height: 100%;
   background-image: url("../../images/ProductLed Method v4.png");
-  background-size: 93%;
+  background-size: 80%;
   background-repeat: no-repeat;
   background-position: center bottom;
 }
@@ -487,4 +487,18 @@ button, .button {
 }
 .components__component_item__text h3 {
   color: #f3ca07;
+}
+.components .slick-prev:before, .components .slick-next:before {
+  color: #f3ca07;
+  font-size: 2.5rem;
+}
+@media (max-width: 63.9375em) {
+  .components .slick-next {
+    right: 1.25rem;
+  }
+}
+@media (max-width: 63.9375em) {
+  .components .slick-prev {
+    left: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
