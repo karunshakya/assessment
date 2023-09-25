@@ -1,0 +1,38 @@
+.testimonials{
+    h2{
+        text-align: center;
+    }
+    
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+
+        @include breakpoints-up(large){
+            flex-wrap: nowrap;
+        }
+
+        .testimonial{
+            text-align: center;
+
+            img{
+                border-radius: 50%;
+                max-width: 125px;
+            }
+
+            p{
+                max-width: 60%;
+                margin: 20px auto;
+                font-size: 24px;
+                font-weight: 300;
+
+                @include breakpoints-up(large){
+                    max-width: 100%;
+                }
+            }
+
+            .company{
+                font-weight: 700;
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.header{
+    position: relative;
+
+    &.open{
+
+        .header__toggle{
+            > span:first-child{
+                transform: rotate(45deg);
+            }
+            > span:nth-child(2){
+                opacity: 0;
+            }
+            > span:last-child{
+                transform: rotate(-45deg);
+            }
+        }
+        
+    }
+
+    &__top{        
+        border-bottom-width: 0.0625rem;
+        border-bottom-style: solid;
+        border-bottom-color: #494949;
+    }
+
+    nav{
+        padding-top: 1.0625rem;
+        padding-bottom: 1.0625rem;
+    }
+
+    &__logo{
+        img{
+            height: 1.5625rem;
+        }
+    }
+    &__toggle{ //mobile menu toggle
+        > span{
+            display: block;
+            width: 32px;
+            height: 2px;
+            background: $light;
+            transition: all 300ms ease-in-out;
+            transform-origin: 4px 1px;
+
+            &:not(:last-child){
+                margin-bottom: 6px;
+            }
+        }
+
+        
+    }
+
+    &__menu{
+        width: 100%;
+        display: block;
+        opacity: 0;
+        transition: all 900ms ease-in-out;
+        //transform:translateY(-200%);
+        z-index: -1;
+        position: absolute;
+        background: $defBackground;
+
+        &.open{
+            opacity: 1;
+            transform:translateY(0px);
+            transition: all 0.5s ease-in-out;
+            z-index: 2;
+        }
+
+        a{
+            color: $light;
+            font-weight: 600;
+            padding: 0.625rem 0.9375rem;
+            display: block;
+            transition: color 200ms ease-in-out;
+            
+            &:hover{
+                color: $hiveYellow;
+            }
+        }
+    }
+
+    &__links{
+        a{
+            font-size: $font-small;
+            color: $light;
+            font-weight: 600;
+            padding: 0.625rem 0.9375rem;
+            margin: 0.625rem;
+            transition: color 200ms ease-in-out;
+
+            &:last-child{
+                padding-right: 0;
+            }
+
+            &:hover{
+                color: $hiveYellow;
+            }
+        }
+    }
+}

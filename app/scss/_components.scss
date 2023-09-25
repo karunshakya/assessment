@@ -1,0 +1,50 @@
+.components{
+
+    h2{
+        span{
+            color: $hiveYellow;
+        }
+    }
+    text-align: center;
+
+    .container{
+        @include breakpoints-up(large){
+            // display: flex;
+            // align-items: center;
+        }
+    }
+
+    &__component_item{
+        
+
+        @include breakpoints-up(large){
+            display: flex !important;
+            align-items: center;
+        }
+
+        &__image_wrapper{
+            @include breakpoints-up(large){
+                flex:1;
+            }
+        }
+        
+
+        &__image{
+            display: inline-block;
+            max-width: 75%; 
+            padding: 1.375rem 0;
+            
+        }
+
+        &__text{
+            @include breakpoints-up(large){
+                text-align: left;
+                flex:1;
+            }
+
+            h3{
+                color: $hiveYellow;
+            }
+        }
+    }
+}

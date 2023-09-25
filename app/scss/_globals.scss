@@ -1,0 +1,127 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: 'Source Sans 3', sans-serif;
+    line-height: 1.3;
+    font-size: $font-mid;
+    background: $defBackground;
+    color: $light;
+
+    &.no-scroll{
+        margin: 0; 
+        height: 100%; 
+        overflow: hidden;
+    }
+}
+
+h1, h2, h3{
+    margin-top: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a, a:visited, a:hover{
+    text-decoration: none;
+}
+
+// Spacing
+.container {
+    max-width: 69.375rem;
+    margin: 0 auto;
+  
+    &--pall {
+      padding-top: 4.375rem;
+      padding-right: 1.5rem;
+      padding-bottom: 4.375rem;
+      padding-left: 1.5rem;
+  
+      @include breakpoints-up(large) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+    }
+    &--py {
+      padding-top: 4.375rem;
+      padding-bottom: 4.375rem;
+  
+      @include breakpoints-up(large) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+    }
+    &--px {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    &--pt {
+      padding-top: 4.375rem;
+  
+      @include breakpoints-up(large) {
+        padding-top: 6rem;
+      }
+    }
+    &--pr {
+      padding-right: 1.5rem;
+    }
+    &--pb {
+      padding-bottom: 4.375rem;
+  
+      @include breakpoints-up(large) {
+        padding-bottom: 6rem;
+      }
+    }
+    &--pl {
+      padding-left: 1.5rem;
+    }
+  }
+
+//flex
+.flex{
+    display: flex;
+
+    &-jc-sb{
+        justify-content: space-between;
+    }
+
+    &-jc-c{
+        justify-content: center;
+    }
+
+    &-ai-c{
+        align-items: center;
+    }
+}
+
+//button
+button, .button{
+    padding: 0.75rem 1.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: $hiveYellow;
+    border: 0;
+    display: inline-block;
+    font-size: $font-tiny;
+    color: $dark;
+}
+
+//visibility
+.hide-for-mobile{
+    @include breakpoints-down(medium){
+        display: none; 
+    }
+}
+
+.hide-for-desktop{
+    @include breakpoints-up(large){
+        display: none;
+    }
+}

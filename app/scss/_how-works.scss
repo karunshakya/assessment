@@ -1,0 +1,109 @@
+.how-works{
+
+    .container{
+        @include breakpoints-up(large){
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__mob-img{
+        max-width: 50%;
+        padding: 1.375rem 0;
+    }
+    
+
+    &__image{
+        position: relative;
+        background-image: url('/images/plg-academy-bg.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 17.5rem;
+
+        @include breakpoints-up(medium){
+        min-height: 25rem;
+        background-position: center 70%;
+        }
+
+        @include breakpoints-up(large){
+        flex: 2;
+        order: 1;
+        height: 41rem;
+        background-image: none;
+        //background-image: url('/images/bg-intro-desktop.svg');
+        //background-position: left center;
+        }
+
+        &::before, &::after {
+        //border: 1px solid magenta;
+        }
+
+        &::before { 
+
+            @include breakpoints-up(large){
+              content: "";
+              position: absolute;
+              height: 100%;
+              background-image: url('/images/plg-academy-bg.svg');        
+              background-repeat: no-repeat;
+              background-position: center bottom;
+              width: 100%;
+              background-size: 122%;
+              background-position: 0% 83%;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('/images/ProductLed\ Method\ v4.png');
+            background-size: 93%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+      
+            @include breakpoints-up(medium){
+              background-size: 52%;
+            }
+      
+            @include breakpoints-up(large){
+                width: 100%;
+                height: 100%;
+                background-size: 94%;
+                background-position: center center;
+            }
+          }
+
+    }
+
+    &__text{
+        text-align: center;
+
+        @include breakpoints-up(large){
+            flex: 3;
+            order: 2;
+            text-align: left;
+        }
+
+        h1{
+            font-weight: 700;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+
+            @include breakpoints-up(large){
+                font-size: 2.8125rem;
+            }
+        }
+
+        p{
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+
+            @include breakpoints-up(large){
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
